@@ -11,6 +11,7 @@ public class Q1_2 {
         String s1 = "aabbccc";
         String s2 = "bbaccca";
 
+        System.out.println(isPermutations(s1, s2));
         System.out.println(isPermutationsWithoutSorting(s1, s2));
     }
 
