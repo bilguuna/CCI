@@ -3,6 +3,10 @@ package bilguun.ariunbold.solutions.chapter1;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author BilguunA
+ */
+
 public class Q1_1 {
     public static void main(String[] args) {
         String s = "e12345689asdqwe";
@@ -28,7 +32,7 @@ public class Q1_1 {
         String uniqueChars = "";
 
         for (int i = 0; i < s.length(); i++) {
-            if(uniqueChars.contains(s.charAt(i) + separator)) {
+            if (uniqueChars.contains(s.charAt(i) + separator)) {
                 return false;
             }
 
