@@ -14,11 +14,11 @@ public class Q1_8 {
         arr[0][0] = 0;
         arr[1][2] = 0;
         arr[2][3] = 0;
-        print(arr, n, m);
+        Utils.print(arr, n, m);
 
         System.out.println("\n\n---------AFTER ZEROED THE ARRAY-----------");
         zeroMatrix(arr, n, m);
-        print(arr, n, m);
+        Utils.print(arr, n, m);
 
 
     }
@@ -48,19 +48,6 @@ public class Q1_8 {
         }
 
         return arr;
-    }
-
-    static void print(Integer[][] arr, Integer n, Integer m) {
-        for (int i = 0; i < n; i++) {
-            System.out.println("");
-            for (int j = 0; j < m; j++) {
-                if (arr[i][j] > 9) {
-                    System.out.print(arr[i][j] + "  ");
-                } else {
-                    System.out.print(arr[i][j] + "   ");
-                }
-            }
-        }
     }
 
     static Integer[][] initArray(int n, int m) {

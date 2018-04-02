@@ -8,16 +8,16 @@ public class Q1_7 {
     public static void main(String[] args) {
         Integer n = 6;
         Integer[][] arr = initArray(n);
-        print(arr, n);
+        Utils.print(arr, n);
 
         arr = rotate(arr, n);
         System.out.println("\n\n---------AFTER ROTATE USING ADDITIONAL ARRAY-----------");
-        print(arr, n);
+        Utils.print(arr, n);
 
         arr = initArray(n);
         arr = rotateInPlace(arr, n);
         System.out.println("\n\n---------AFTER ROTATE IN PLACE-----------");
-        print(arr, n);
+        Utils.print(arr, n);
 
     }
 
@@ -60,16 +60,4 @@ public class Q1_7 {
         return r;
     }
 
-    static void print(Integer[][] arr, Integer n) {
-        for (int i = 0; i < n; i++) {
-            System.out.println("");
-            for (int j = 0; j < n; j++) {
-                if (arr[i][j] > 9) {
-                    System.out.print(arr[i][j] + "  ");
-                } else {
-                    System.out.print(arr[i][j] + "   ");
-                }
-            }
-        }
-    }
 }

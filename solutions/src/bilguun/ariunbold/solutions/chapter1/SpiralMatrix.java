@@ -1,5 +1,7 @@
 package bilguun.ariunbold.solutions.chapter1;
 
+import static bilguun.ariunbold.solutions.chapter1.Utils.print;
+
 /**
  * @author bilguuna
  */
@@ -45,19 +47,6 @@ public class SpiralMatrix {
         }
 
         return r;
-    }
-
-    static void print(Integer[][] arr, Integer n) {
-        for (int i = 0; i < n; i++) {
-            System.out.println("");
-            for (int j = 0; j < n; j++) {
-                if (arr[i][j] > 9) {
-                    System.out.print(arr[i][j] + "  ");
-                } else {
-                    System.out.print(arr[i][j] + "   ");
-                }
-            }
-        }
     }
 }
 
