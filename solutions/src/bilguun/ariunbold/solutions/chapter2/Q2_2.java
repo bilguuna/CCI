@@ -11,21 +11,25 @@ public class Q2_2 {
         int k = 4;
         System.out.println(k + "th to the last is : " + getKth(head, k).getValue());
         System.out.println(k + "th to the last is(2 pointers) : " + getKthByTwoPointers(head, k).getValue());
-        getKthRecursively(head, k);
-
+        System.out.println(k + "th to the last is(recursively): " + getKthRecursively(head, k, new Index()).getValue());
     }
 
-    static int getKthRecursively(Node node, int k) {
-        if (node == null) {
-            return 0;
+    static class Index {
+        int index = 0;
+    }
+
+    static Node getKthRecursively(Node head, int k, Index idx) {
+        if (head == null) {
+            return null;
         }
 
-        int index = getKthRecursively(node.getNext(), k) + 1;
-        if (index == k) {
-            System.out.println(k + "th to the last is(Recursively) : " + node.getValue());
+        Node node = getKthRecursively(head.getNext(), k, idx);
+        idx.index += 1;
+        if (idx.index == k) {
+            return head;
         }
 
-        return index;
+        return node;
     }
 
 
