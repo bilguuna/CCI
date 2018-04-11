@@ -2,7 +2,6 @@ package bilguun.ariunbold.solutions.chapter2;
 
 public class Utils {
     public static void print(Node node) {
-        System.out.println("PRINT:");
         while (node != null) {
             System.out.print(node.getValue().toString());
             System.out.print(" -> ");
