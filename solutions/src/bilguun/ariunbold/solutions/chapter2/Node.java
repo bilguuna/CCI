@@ -7,6 +7,10 @@ public class Node<T> {
     public Node() {
     }
 
+    public Node(T value) {
+        this.value = value;
+    }
+
     public Node(T value, Node<T> next) {
         this.value = value;
         this.next = next;

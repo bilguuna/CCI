@@ -23,4 +23,15 @@ public class Utils {
         }
         return r;
     }
+
+    public static int lengthOfLinkedList(Node node) {
+        int r = 0;
+
+        while (node != null) {
+            r++;
+            node = node.getNext();
+        }
+
+        return r;
+    }
 }
