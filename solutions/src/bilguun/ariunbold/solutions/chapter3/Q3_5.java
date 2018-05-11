@@ -38,13 +38,8 @@ class SortedStack {
             if (head >= value) {
                 stack.push(value);
             } else {
-                while (head < value && !stack.isEmpty()) {
+                while (!stack.isEmpty() && stack.peek() < value) {
                     tmpStack.push(stack.pop());
-
-                    if (stack.isEmpty()) {
-                        break;
-                    }
-                    head = stack.peek();
                 }
                 stack.push(value);
                 moveBackStacks();
