@@ -8,7 +8,7 @@ import java.util.Stack;
 
 public class Q3_5 {
     public static void main(String... args) {
-        SortedStack stack = new SortedStack();
+        Stack stack = new Stack();
         stack.push(14);
         stack.push(13);
         stack.push(20);
@@ -19,8 +19,31 @@ public class Q3_5 {
         stack.push(33);
         stack.push(6);
 
+        sort(stack);
+
         while (!stack.isEmpty()) {
             System.out.println(stack.pop());
+        }
+    }
+
+    static void sort(Stack<Integer> stack) {
+        Stack<Integer> tmpStack = new Stack<>();
+
+        while (!stack.isEmpty()) {
+            if (tmpStack.isEmpty()) {
+                tmpStack.push(stack.pop());
+            } else {
+                Integer tmp = stack.pop();
+                while (!tmpStack.isEmpty() && tmpStack.peek() > tmp) {
+                    stack.push(tmpStack.pop());
+                }
+
+                tmpStack.push(tmp);
+            }
+        }
+
+        while (!tmpStack.isEmpty()) {
+            stack.push(tmpStack.pop());
         }
     }
 
