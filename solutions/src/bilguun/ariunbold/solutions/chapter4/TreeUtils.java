@@ -42,6 +42,7 @@ class BinaryTreeNode<T> {
 	private T value;
 	private BinaryTreeNode<T> left;
 	private BinaryTreeNode<T> right;
+	private int level;
 
 	public BinaryTreeNode(T value) {
 		this.value = value;
@@ -69,6 +70,14 @@ class BinaryTreeNode<T> {
 
 	public void setRight(BinaryTreeNode<T> right) {
 		this.right = right;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
 }
