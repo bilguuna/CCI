@@ -10,9 +10,12 @@ import java.util.Stack;
  *
  */
 
-public class ClosesPalindrom {
+public class ClosestPalindrom {
 	public static void main(String... args) {
-		System.out.println(getClosestPalindrom(231921));
+		int n = 1232132;
+
+		System.out.println(getClosestPalindrom(n));
+		System.out.println(getClosestPalindromByString(n));
 	}
 
 	static int getClosestPalindrom(int n) {
@@ -47,5 +50,29 @@ public class ClosesPalindrom {
 			r = r * 10 + digits.get(i);
 		}
 		return r;
+	}
+
+	static int getClosestPalindromByString(int n) {
+		if (n < 10) {
+			return n;
+		}
+
+		String stringVal = String.valueOf(n);
+		int length = stringVal.length();
+
+		String firstHalf = "";
+		String closestPalindrom = "";
+
+		firstHalf = stringVal.substring(0, length / 2);
+		StringBuilder sb = new StringBuilder(firstHalf);
+
+		if (length % 2 == 0) {
+			closestPalindrom = firstHalf + sb.reverse().toString();
+		} else {
+			closestPalindrom = firstHalf + stringVal.charAt(length / 2) + sb.reverse().toString();
+		}
+
+		return Integer.valueOf(closestPalindrom);
+
 	}
 }
