@@ -36,48 +36,57 @@ public class TreeUtils {
 			}
 		}
 	}
-}
 
-class BinaryTreeNode<T> {
-	private T value;
-	private BinaryTreeNode<T> left;
-	private BinaryTreeNode<T> right;
-	private int level;
+	public static class BinaryTreeNode<T> {
+		private T value;
+		private BinaryTreeNode<T> left;
+		private BinaryTreeNode<T> right;
+		private int level;
+		private String path;
 
-	public BinaryTreeNode(T value) {
-		this.value = value;
+		public BinaryTreeNode(T value) {
+			this.value = value;
+		}
+
+		public T getValue() {
+			return value;
+		}
+
+		public void setValue(T value) {
+			this.value = value;
+		}
+
+		public BinaryTreeNode<T> getLeft() {
+			return left;
+		}
+
+		public void setLeft(BinaryTreeNode<T> left) {
+			this.left = left;
+		}
+
+		public BinaryTreeNode<T> getRight() {
+			return right;
+		}
+
+		public void setRight(BinaryTreeNode<T> right) {
+			this.right = right;
+		}
+
+		public int getLevel() {
+			return level;
+		}
+
+		public void setLevel(int level) {
+			this.level = level;
+		}
+
+		public String getPath() {
+			return path;
+		}
+
+		public void setPath(String path) {
+			this.path = path;
+		}
+
 	}
-
-	public T getValue() {
-		return value;
-	}
-
-	public void setValue(T value) {
-		this.value = value;
-	}
-
-	public BinaryTreeNode<T> getLeft() {
-		return left;
-	}
-
-	public void setLeft(BinaryTreeNode<T> left) {
-		this.left = left;
-	}
-
-	public BinaryTreeNode<T> getRight() {
-		return right;
-	}
-
-	public void setRight(BinaryTreeNode<T> right) {
-		this.right = right;
-	}
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
 }

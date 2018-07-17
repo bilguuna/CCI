@@ -1,5 +1,7 @@
 package bilguun.ariunbold.solutions.chapter4;
 
+import bilguun.ariunbold.solutions.chapter4.TreeUtils.BinaryTreeNode;
+
 /**
  * @author bilguuna
  */
